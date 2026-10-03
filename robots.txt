@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Mettez à jour l'URL après déploiement
+Sitemap: https://www.votre-domaine.com/sitemap.xml

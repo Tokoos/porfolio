@@ -1,0 +1,4 @@
+Déposez ici votre CV au format PDF sous le nom :
+CV-Jacques-Houndjetode.pdf
+
+(ou changez le chemin dans data/profile.js -> cv.file)

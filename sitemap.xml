@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Mettez à jour le domaine après déploiement -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.votre-domaine.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://www.votre-domaine.com/projet.html?id=fire-detection</loc></url>
+  <url><loc>https://www.votre-domaine.com/projet.html?id=esp32-type-c</loc></url>
+  <url><loc>https://www.votre-domaine.com/projet.html?id=usb-quadrature-decoder</loc></url>
+  <url><loc>https://www.votre-domaine.com/projet.html?id=smart-sensor</loc></url>
+  <url><loc>https://www.votre-domaine.com/projet.html?id=nfc-module</loc></url>
+  <url><loc>https://www.votre-domaine.com/projet.html?id=industrial-controller</loc></url>
+  <url><loc>https://www.votre-domaine.com/projet.html?id=can-uart-interface</loc></url>
+  <url><loc>https://www.votre-domaine.com/projet.html?id=radar-detection</loc></url>
+  <url><loc>https://www.votre-domaine.com/projet.html?id=stm32-control-platform</loc></url>
+</urlset>

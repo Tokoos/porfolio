@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Jacques Houndjetode — Ingénieur électronique, systèmes embarqués & PCB Design</title>
+  <meta name="description" content="Portfolio de Jacques Houndjetode, ingénieur en électronique, micro- et nanoélectronique : conception de cartes électroniques sous Altium Designer, PCB multicouches à impédance contrôlée, IoT, systèmes industriels, capteurs et recherche en électronique basse consommation.">
+  <meta name="author" content="Jacques Houndjetode">
+  <meta name="theme-color" content="#111111">
+  <!-- À METTRE À JOUR après déploiement : remplacez https://www.votre-domaine.com -->
+  <link rel="canonical" href="https://www.votre-domaine.com/">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Jacques Houndjetode — Portfolio">
+  <meta property="og:title" content="Jacques Houndjetode — Ingénieur électronique & PCB Design">
+  <meta property="og:description" content="Conception électronique, systèmes embarqués, PCB Design et technologies basse consommation.">
+  <meta property="og:url" content="https://www.votre-domaine.com/">
+  <meta property="og:image" content="https://www.votre-domaine.com/assets/img/projets/esp32-typec.webp">
+  <meta property="profile:first_name" content="Jacques">
+  <meta property="profile:last_name" content="Houndjetode">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/projets/esp32-typec-3d.webp">
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jacques Houndjetode",
+    "jobTitle": "Ingénieur en électronique, micro- et nanoélectronique",
+    "email": "mailto:houndjetodej@gmail.com",
+    "url": "https://www.votre-domaine.com/",
+    "knowsLanguage": ["fr", "ru", "en"],
+    "knowsAbout": ["Conception électronique", "PCB Design", "Altium Designer", "Contrôle d'impédance", "Systèmes embarqués", "ESP32", "STM32", "LoRa", "IoT", "Capteurs", "Microélectronique", "Nanoélectronique", "Tunnel FET", "Edge AI"],
+    "sameAs": ["https://github.com/Tokoos"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <!-- ================= NAVIGATION ================= -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#accueil" class="nav__brand" aria-label="Jacques Houndjetode — accueil">
+        <span class="brand-mark" aria-hidden="true">JH</span>
+        <span class="nav__brand-text">Jacques<br>Houndjetode</span>
+      </a>
+      <nav aria-label="Navigation principale">
+        <ul class="nav__links">
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#apropos">À propos</a></li>
+          <li><a href="#projets">Projets réalisés</a></li>
+          <li><a href="#experience">Expérience</a></li>
+          <li><a href="#formation">Formation</a></li>
+          <li><a href="#expertise">Compétences</a></li>
+          <li><a href="#recherche">Recherche</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav__actions">
+        <a class="btn btn-sm btn-cv" href="#" data-cv-download>CV</a>
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Ouvrir le menu"><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <nav aria-label="Navigation mobile">
+        <ol>
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#apropos">À propos</a></li>
+          <li><a href="#projets">Projets réalisés</a></li>
+          <li><a href="#experience">Expérience</a></li>
+          <li><a href="#formation">Formation</a></li>
+          <li><a href="#expertise">Compétences</a></li>
+          <li><a href="#recherche">Recherche</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ol>
+        <a class="btn btn-primary" href="#" data-cv-download>Télécharger mon CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Piste PCB signature (générée par main.js) -->
+    <svg class="signal-trace" id="signal-trace" aria-hidden="true" focusable="false">
+      <path class="trace-base"/>
+      <path class="trace-live"/>
+      <g class="trace-nodes"></g>
+      <circle class="trace-halo" r="6"/>
+      <circle class="trace-head" r="3.5"/>
+    </svg>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="accueil" aria-labelledby="hero-name">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="status" data-bind="profile.availability">Disponible — opportunités & recherche</p>
+          <h1 class="hero__name" id="hero-name"><span>Jacques</span><span>Houndjetode<i class="pad" aria-hidden="true"></i></span></h1>
+          <p class="hero__title" data-bind="profile.title">Ingénieur en électronique, micro- et nanoélectronique</p>
+          <p class="hero__tagline" data-bind="profile.tagline">Conception électronique, systèmes embarqués, PCB Design et technologies basse consommation.</p>
+          <div class="hero__ctas">
+            <a class="btn btn-primary btn-lg" href="#projets">Voir les projets réalisés
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="btn btn-secondary btn-lg" href="#" data-cv-download>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M4 17v2.5A1.5 1.5 0 005.5 21h13a1.5 1.5 0 001.5-1.5V17"/></svg>
+              Télécharger mon CV</a>
+          </div>
+          <p class="hero__facts"><span><strong>Master</strong> Micro/Nanoélectronique · HSE</span><span><strong id="fact-projects">8</strong> cartes conçues</span><span><strong>IEEE Xplore</strong> 2025</span></p>
+        </div>
+
+        <div class="hero__visual" aria-label="Composition de cartes électroniques réelles conçues sous Altium Designer" role="img">
+          <div class="hero__disc" aria-hidden="true"></div>
+          <svg class="hero__circuit" viewBox="0 0 600 576" aria-hidden="true">
+            <path d="M0 96 H96 V40 H232"/>
+            <path d="M600 210 H548 V310 H486"/>
+            <path d="M600 470 H520 V560"/>
+            <path d="M40 576 V520 H140"/>
+            <circle cx="232" cy="40" r="5"/><circle cx="486" cy="310" r="5"/><circle cx="140" cy="520" r="5"/>
+            <rect x="514" y="556" width="12" height="12" rx="2"/><rect x="90" y="90" width="12" height="12" rx="2"/>
+          </svg>
+          <figure class="float-card float-card--main" style="margin:0"><img src="assets/img/projets/esp32-typec-3d.webp" alt="Rendu 3D de la carte ESP32 Type-C conçue sous Altium Designer" width="843" height="557" fetchpriority="high"></figure>
+          <figure class="float-card float-card--photo" style="margin:0"><img src="assets/img/projets/fire-detection-photo.webp" alt="Cartes de détection incendie fabriquées et assemblées" width="1600" height="1200" loading="lazy"></figure>
+          <figure class="float-card float-card--top" style="margin:0"><img src="assets/img/projets/esp32-typec-top.webp" alt="Vue de dessus de la carte ESP32 Type-C" width="332" height="557" loading="lazy"></figure>
+          <span class="chip chip--a">Altium Designer · Rendu 3D</span>
+          <span class="chip chip--b">USB-C · ESP32 · Wi-Fi/BT</span>
+          <span class="chip chip--c">Prototypes fabriqués</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BANDEAU ================= -->
+    <div class="band" aria-label="Points forts techniques">
+      <div class="band__track" id="band-track"></div>
+    </div>
+
+    <!-- ================= À PROPOS ================= -->
+    <section class="section" id="apropos" aria-labelledby="about-title" data-trace="Profil">
+      <div class="container about">
+        <figure class="about__figure" data-reveal>
+          <div class="about__img"><img id="about-img" src="assets/img/projets/smart-sensor-panel.webp" alt="" width="1200" height="1600" loading="lazy"></div>
+          <figcaption>Panneau Smart Sensor — sortie de fabrication</figcaption>
+        </figure>
+        <div class="about__text" data-reveal style="--d:100ms">
+          <p class="eyebrow"><b>01</b> À propos</p>
+          <h2 class="h2" id="about-title">À propos</h2>
+          <p class="about__lead" id="about-lead"></p>
+          <div id="about-paragraphs"></div>
+          <ul class="tag-list about__keywords" id="about-keywords" aria-label="Mots-clés"></ul>
+          <div class="about__meta">
+            <div><p class="meta-label">Domaines d'expérience</p><ul class="meta-list" id="about-domains"></ul></div>
+            <div><p class="meta-label">Langues</p><ul class="meta-list" id="about-languages"></ul></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJETS ================= -->
+    <section class="section section--projects" id="projets" aria-labelledby="projects-title" data-trace="Projets réalisés">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><b>02</b> Projets réalisés</p>
+          <h2 class="h2" id="projects-title">Projets réalisés</h2>
+          <p class="lead">Une sélection de projets électroniques conçus, développés et réalisés.</p>
+        </div>
+        <div class="filters" id="project-filters" role="group" aria-label="Filtrer les projets réalisés par catégorie"></div>
+        <p class="project-count" id="project-count" aria-live="polite"></p>
+        <div class="project-grid" id="project-grid"></div>
+      </div>
+    </section>
+
+    <!-- ================= EXPÉRIENCE ================= -->
+    <section class="section" id="experience" aria-labelledby="xp-title" data-trace="Expérience">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><b>03</b> Parcours</p>
+          <h2 class="h2" id="xp-title">Expérience professionnelle</h2>
+        </div>
+        <div id="experience-list"></div>
+      </div>
+    </section>
+
+    <!-- ================= FORMATION ================= -->
+    <section class="section section--white" id="formation" aria-labelledby="edu-title" data-trace="Formation">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><b>04</b> Apprentissage</p>
+          <h2 class="h2" id="edu-title">Formation &amp; certifications</h2>
+        </div>
+        <div class="edu-grid">
+          <div><h3 class="sub-title">Formation</h3><div id="education"></div></div>
+          <div id="publications" hidden><h3 class="sub-title">Publications</h3><ul class="pubs"></ul></div>
+        </div>
+        <div class="certs-head" data-reveal>
+          <h3 class="sub-title">Certifications</h3>
+          <p>Cliquez sur un certificat pour ouvrir le document complet.</p>
+        </div>
+        <ul class="certs" id="certifications"></ul>
+      </div>
+    </section>
+
+    <!-- ================= EXPERTISE ================= -->
+    <section class="section" id="expertise" aria-labelledby="skills-title" data-trace="Skills">
+      <div class="container">
+        <h2 class="skills-title trace-anchor" id="skills-title" data-reveal><span class="skills-title__num">05</span>Skills</h2>
+        <div class="skills-grid" id="skills-list"></div>
+      </div>
+    </section>
+
+    <!-- ================= RECHERCHE ================= -->
+    <section class="section section--warm" id="recherche" aria-labelledby="research-title" data-trace="Recherche">
+      <div class="container">
+        <article class="research" data-reveal>
+          <div class="research__grid">
+            <div>
+              <p class="eyebrow"><b>06</b> <span data-bind="research.label">Orientation recherche</span></p>
+              <h2 class="research__title" id="research-title"></h2>
+              <div class="research__text">
+                <div><h3>Contexte</h3><p id="research-context"></p></div>
+                <div><h3>Problématique</h3><p id="research-problem"></p></div>
+              </div>
+            </div>
+            <ol class="pipeline" id="research-pipeline" aria-label="Chaîne étudiée : capteur, TFET, lecture et prétraitement analogique, Edge AI, système basse consommation"></ol>
+          </div>
+          <div class="research__bottom">
+            <div><h3>Objectifs</h3><ul id="research-objectives"></ul></div>
+            <div><h3>Technologies étudiées</h3><ul id="research-tech"></ul></div>
+            <div><h3>Applications potentielles</h3><ul id="research-apps"></ul></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section section--white" id="contact" aria-labelledby="contact-title" data-trace="Futur">
+      <div class="container">
+        <p class="eyebrow" data-reveal><b>07</b> Contact</p>
+        <h2 class="contact__title" id="contact-title" data-reveal>Un projet<br>en tête <span>?</span></h2>
+        <div class="contact__grid">
+          <div data-reveal>
+            <p class="contact__text">Disponible pour des opportunités professionnelles, projets électroniques, collaborations techniques et projets de recherche.</p>
+            <ul class="contact-links" id="contact-links"></ul>
+            <div class="contact__ctas">
+              <a class="btn btn-primary btn-lg" id="contact-cta" href="#">Me contacter
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a class="btn btn-secondary btn-lg" href="#" data-cv-download>Télécharger mon CV</a>
+            </div>
+          </div>
+          <div class="form-card" data-reveal style="--d:120ms">
+            <h3>Écrire un message</h3>
+            <div id="contact-form"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <p class="footer__name">Jacques Houndjetode<span>.</span></p>
+          <p class="footer__title">Ingénieur en électronique, micro- et nanoélectronique</p>
+        </div>
+        <ul class="footer__links" id="footer-links"></ul>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span id="year">2026</span> Jacques Houndjetode</p>
+        <p><a href="#accueil">Retour en haut ↑</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Données (modifiables) -->
+  <script src="data/profile.js"></script>
+  <script src="data/contact.js"></script>
+  <script src="data/projects.js"></script>
+  <script src="data/education.js"></script>
+  <script src="data/experience.js"></script>
+  <script src="data/skills.js"></script>
+  <script src="data/research.js"></script>
+  <!-- Interface -->
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

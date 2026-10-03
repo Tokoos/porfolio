@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "broken-image",
+        "value": "*",
+        "files": [
+          "assets/js/components.js"
+        ],
+        "createdAt": "2026-10-02T08:37:52.142Z",
+        "reason": "claude: lightbox <img> src is assigned in render() before the dialog opens; never shown empty"
+      },
+      {
+        "rule": "clipped-overflow-container",
+        "value": "*",
+        "files": [
+          "projet.html"
+        ],
+        "createdAt": "2026-10-02T08:45:47.544Z",
+        "reason": "claude: only decorative layers (altium-band accent bar, spec-visual) are clipped intentionally; no tooltips/menus"
+      }
+    ]
+  }
+}

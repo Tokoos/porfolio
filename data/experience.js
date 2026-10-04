@@ -29,7 +29,7 @@ PORTFOLIO.experience = [
       "Contribution à un projet de mémoire : système d'orientation par ondes sonores fondé sur l'effet Doppler, alternative à la navigation GPS.",
       "Conception et assemblage du matériel du banc de mesure acoustique ; développement du firmware microcontrôleur.",
       "Acquisition et analyse de signaux acoustiques pour localiser des sources de bruit par effet Doppler.",
-      "Mémoire soutenu avec mention."
+      "Soutenance du mémoire de fin d'études avec mention très bien."
     ],
     tags: ["Acoustique", "Effet Doppler", "Firmware", "Traitement du signal"]
   },

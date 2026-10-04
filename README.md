@@ -30,8 +30,16 @@ Dans `data/projects.js`, collez le lien **public / lecture seule** du Web Viewer
 ## Images
 Elles sont dans `assets/img/projets/`, au format WebP. Pour en ajouter : déposez le fichier, puis renseignez `cover` (image principale) et `gallery` dans `data/projects.js`. Un projet sans image affiche une fiche technique typographique : aucune image n'est inventée.
 
+## Vidéo « Reel » pilotée par le curseur
+La section sombre sous le bandeau orange affiche `assets/video/`. La vidéo reste en pause : la position horizontale du curseur fixe sa progression (gauche = début, droite = fin). Sur mobile, on glisse le doigt ; au clavier, on utilise les flèches.
+
+Le site charge deux versions ré-encodées pour une navigation fluide (une image clé toutes les 5 images, sans son) : `pcb-reel-scrub-720.mp4` sur ordinateur et `pcb-reel-scrub-480.mp4` sur mobile, avec l'affiche `pcb-reel-poster.jpg`. L'original `PCB-Design-Reel-Jacques-Houndjetode.mp4` n'est pas chargé par le site. Il peut être retiré du déploiement pour l'alléger.
+
+Pour remplacer la vidéo, ré-encodez-la de la même manière, par exemple :
+`ffmpeg -i source.mp4 -an -vf scale=1280:-2 -c:v libx264 -crf 25 -g 5 -keyint_min 5 -sc_threshold 0 -movflags +faststart pcb-reel-scrub-720.mp4`
+
 ## CV
-Déposez votre PDF ici : `assets/cv/CV-Jacques-Houndjetode.pdf`. Tous les boutons CV pointent vers ce fichier.
+Le CV est dans `assets/cv/CV-Jacques-Houndjetode.pdf`. Pour le mettre à jour, remplacez ce fichier en gardant le même nom : tous les boutons CV pointent vers lui.
 
 ## Formulaire de contact
 Sans configuration, le formulaire ouvre la messagerie du visiteur avec le message pré-rempli. Pour un envoi direct, collez l'URL d'un service comme Formspree dans `form.endpoint` (`data/contact.js`). Protection anti-spam incluse : champ « pot de miel » invisible et délai minimal avant envoi.

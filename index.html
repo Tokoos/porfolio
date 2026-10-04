@@ -139,6 +139,32 @@
       <div class="band__track" id="band-track"></div>
     </div>
 
+    <!-- ================= REEL (vidéo pilotée par le curseur) ================= -->
+    <section class="reel-section" id="reel-section" aria-labelledby="reel-title">
+      <div class="container">
+        <div class="reel-head" data-reveal>
+          <div>
+            <p class="eyebrow"><b>Reel</b> PCB Design</p>
+            <h2 class="reel-title" id="reel-title">Du concept au PCB professionnel<span>.</span></h2>
+          </div>
+          <p class="reel-sub">Déplacez le curseur sur la vidéo : vers la droite l'animation avance, vers la gauche elle recule.</p>
+        </div>
+        <div class="reel" id="reel" data-reveal
+             data-src="assets/video/pcb-reel-scrub-720.mp4"
+             data-src-small="assets/video/pcb-reel-scrub-480.mp4"
+             tabindex="0" role="slider" aria-label="Animation PCB Design — progression"
+             aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="0 %">
+          <video muted playsinline preload="auto" disablepictureinpicture disableremoteplayback
+                 poster="assets/video/pcb-reel-poster.jpg" aria-hidden="true"></video>
+          <div class="reel__hud" aria-hidden="true">
+            <span class="reel__time">00:00 / 00:30</span>
+            <span class="reel__hint"><i>←</i> Glissez pour explorer <i>→</i></span>
+          </div>
+          <div class="reel__track" aria-hidden="true"><span class="reel__bar"></span></div>
+        </div>
+      </div>
+    </section>
+
     <!-- ================= À PROPOS ================= -->
     <section class="section" id="apropos" aria-labelledby="about-title" data-trace="Profil">
       <div class="container about">
@@ -288,5 +314,6 @@
   <!-- Interface -->
   <script src="assets/js/components.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/reel.js"></script>
 </body>
 </html>

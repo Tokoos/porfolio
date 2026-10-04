@@ -405,6 +405,20 @@ img.pc-media__img { padding: 4%; }
 @media (max-width: 960px) { .edu-grid { grid-template-columns: 1fr; } .certs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 600px) { .certs { grid-template-columns: 1fr; } }
 
+/* ---------- Moments forts (mosaïque, formats d'origine conservés) ---------- */
+.moments { columns: 3 300px; column-gap: clamp(14px, 1.8vw, 22px); }
+.moment { break-inside: avoid; margin-bottom: clamp(14px, 1.8vw, 22px); }
+.moment__btn { position: relative; display: block; width: 100%; padding: 0; border: 0; border-radius: var(--r); overflow: hidden; background: var(--soft); cursor: zoom-in; box-shadow: var(--shadow-sm); transition: box-shadow 0.5s var(--ease), transform 0.5s var(--ease); }
+.moment__btn img { width: 100%; height: auto; transition: transform 1.2s var(--ease); }
+.moment__btn:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+.moment__btn:hover img { transform: scale(1.035); }
+.moment__cap { position: absolute; inset: auto 0 0; display: grid; gap: 2px; padding: 44px 18px 16px; text-align: left; color: #fff; background: linear-gradient(transparent, rgba(17, 17, 17, 0.78)); }
+.moment__cap strong { font-size: 1rem; font-weight: 600; letter-spacing: -0.01em; }
+.moment__cap span { font-size: 0.82rem; color: rgba(255, 255, 255, 0.8); }
+.moment--featured .moment__cap strong { font-size: 1.15rem; }
+.moment--featured .moment__btn { outline: 2px solid var(--orange); outline-offset: -2px; }
+@media (max-width: 640px) { .moments { columns: 1; } }
+
 /* ---------- Skills (section sombre, accent cyan) ---------- */
 #expertise {
   --tech: var(--cyan);

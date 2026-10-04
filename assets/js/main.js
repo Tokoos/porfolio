@@ -65,6 +65,20 @@
   html("#education", U.EducationTimeline(P.education));
   html("#certifications", (P.certifications || []).map(U.CertificationCard).join(""));
 
+  /* ---------- Moments forts ---------- */
+  var moments = P.moments || [];
+  var mg = html("#moments-grid", moments.map(function (it, i) {
+    return '<li class="moment' + (it.featured ? " moment--featured" : "") + '" data-reveal style="--d:' + (i % 3) * 80 + 'ms">' +
+      '<button type="button" class="moment__btn" data-moment="' + i + '" aria-label="Agrandir : ' + esc(it.title) + '">' +
+        '<img src="' + esc(it.src) + '" alt="' + esc(it.alt || it.title) + '" loading="lazy" decoding="async">' +
+        '<span class="moment__cap"><strong>' + esc(it.title) + "</strong>" + (it.detail ? "<span>" + esc(it.detail) + "</span>" : "") + "</span>" +
+      "</button></li>";
+  }).join(""));
+  if (mg) mg.addEventListener("click", function (e) {
+    var b = e.target.closest("[data-moment]");
+    if (b) U.ProjectGallery.open(moments.map(function (it) { return { src: it.src, caption: it.title + (it.detail ? " — " + it.detail : "") }; }), +b.getAttribute("data-moment"));
+  });
+
   /* ---------- Skills ---------- */
   html("#skills-list", (P.skills || []).map(function (g, i) {
     return '<article class="skill-cat' + (g.research ? " skill-cat--research" : "") + '" data-reveal style="--d:' + (i % 2) * 80 + 'ms">' +

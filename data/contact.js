@@ -7,7 +7,7 @@ window.PORTFOLIO = window.PORTFOLIO || {};
 PORTFOLIO.contact = {
   email: "houndjetodej@gmail.com",
   phone: "",
-  location: "",
+  location: "Moscou, Russie (GMT+3)",
 
   linkedin: "", // ex. "https://www.linkedin.com/in/votre-profil" — à compléter
   github: "https://github.com/Tokoos",

@@ -9,9 +9,9 @@ window.PORTFOLIO = window.PORTFOLIO || {};
 
 PORTFOLIO.education = [
   {
-    degree: "Master — Electronics Engineering, Micro- and Nanoelectronics",
+    degree: "Master — Ingénierie en électronique, micro- et nanoélectronique",
     specialty: "Programme « Électronique appliquée et photonique » — qualification de Master",
-    school: "HSE University (MIEM named after A.N. Tikhonov)",
+    school: "Université HSE (MIEM A.N. Tikhonov)",
     logo: "assets/img/logos/hse.webp",
     location: "Moscou, Russie",
     period: "2024 — 2026",

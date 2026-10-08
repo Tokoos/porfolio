@@ -23,25 +23,31 @@ PORTFOLIO.profile = {
 
   about: {
     lead:
-      "Ingénieur en développement de produits électroniques, spécialisé dans la conception de cartes électroniques et le prototypage de systèmes embarqués.",
+      "Ingénieur électronicien maîtrisant le cycle complet de développement de cartes électroniques, du schéma de principe à la préparation de la production.",
     paragraphs: [
-      "Je conçois des schémas et des PCB multicouches avec contrôle d'impédance sur Altium Designer, pour des applications allant de l'IoT connecté aux systèmes de contrôle industriel.",
-      "Mes projets couvrent la détection et l'acquisition de signaux (radar, capteurs de gaz, encodeurs), la communication sans fil et filaire (LoRa, Wi-Fi, Bluetooth, NFC, CAN, UART, I²C, USB), ainsi que la géolocalisation (GPS).",
-      "Je maîtrise l'ensemble du cycle de conception : schématique, routage, sélection de composants et préparation du dossier de production complet (BOM, plan d'assemblage, Gerber).",
-      "Titulaire d'un master en électronique, micro- et nanoélectronique de HSE University (Moscou), j'ai notamment publié dans IEEE Xplore des travaux sur la classification de liquides par signaux acoustiques. Je m'oriente aujourd'hui vers la recherche en nanoélectronique et en électronique à très basse consommation."
+      "En deux ans, j'ai conçu des cartes PCB multicouches pour des équipements industriels de mesure et de contrôle, en assurant le routage à impédance contrôlée d'interfaces haute vitesse (Ethernet, CAN) ainsi que l'intégration matériel-logiciel en C/C++. Je prépare le dossier de production complet : Gerber, BOM, plan d'assemblage.",
+      "Auteur d'une publication scientifique dans IEEE Xplore sur la classification acoustique de liquides à l'aide d'un modèle KAN, de l'expérimentation à la publication.",
+      "Titulaire d'un Master de l'Université HSE (MIEM, micro- et nanoélectronique, 2026), avec une expérience de la simulation TCAD de transistors MOSFET sous Synopsys Sentaurus.",
+      "Ingénieur trilingue (français / russe / anglais) avec une expérience de terrain en Afrique et en Russie, prêt à collaborer à distance avec des clients du monde entier."
     ],
-    keywords: ["Embedded Systems", "PCB Design", "Altium Designer", "Electronics", "Microelectronics", "Sensors", "Low Power", "R&D"],
+    keywords: ["Embedded Systems", "PCB Design", "Altium Designer", "Hardware + Firmware", "Microelectronics", "TCAD", "Sensors", "Low Power", "R&D"],
     domains: ["Équipements de mesure et de contrôle", "IoT", "Systèmes embarqués", "Acoustique & traitement du signal", "Communication sans fil"],
     languages: [
       { name: "Français", level: "Natif" },
-      { name: "Russe", level: "B2" },
-      { name: "Anglais", level: "B1" }
+      { name: "Russe", level: "B2 (avancé intermédiaire)" },
+      { name: "Anglais", level: "B1 (intermédiaire)" }
+    ],
+    availability: [
+      "Basé à Moscou (GMT+3) — flexible avec les fuseaux USA, Europe, Canada et Afrique",
+      "Ouvert aux missions courtes et longues durées",
+      "Disponible pour des déplacements professionnels",
+      "Permis de conduire catégorie B"
     ],
     image: { src: "assets/img/projets/smart-sensor-panel.webp", alt: "Panneau de PCB Smart Sensor fabriqué : trois cartes nues et une carte assemblée" }
   },
 
   /* Bandeau orange sous le Hero */
-  highlights: ["PCB multicouches", "High-speed routing", "Impédance contrôlée", "Altium · KiCad · EasyEDA", "Ethernet · CAN · SPI · I²C", "BOM · Gerber · Assemblage", "IEEE Xplore 2025"],
+  highlights: ["PCB multicouches", "High-speed routing", "Impédance contrôlée", "Altium · KiCad · EasyEDA", "Ethernet · CAN · SPI · I²C", "BOM · Gerber · Assemblage", "TCAD · Sentaurus", "IEEE Xplore 2025"],
 
   cv: {
     file: "assets/cv/CV-Jacques-Houndjetode.pdf", // déposez votre PDF à cet emplacement

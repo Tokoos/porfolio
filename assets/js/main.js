@@ -29,6 +29,7 @@
   html("#about-paragraphs", (A.paragraphs || []).map(function (p) { return "<p>" + esc(p) + "</p>"; }).join(""));
   html("#about-keywords", (A.keywords || []).map(function (k) { return '<li class="tag tag--orange">' + esc(k) + "</li>"; }).join(""));
   html("#about-domains", (A.domains || []).map(function (d) { return "<li>" + esc(d) + "</li>"; }).join(""));
+  html("#about-availability", (A.availability || []).map(function (d) { return "<li>" + esc(d) + "</li>"; }).join(""));
   html("#about-languages", (A.languages || []).map(function (l) { return "<li>" + esc(l.name) + " <span>— " + esc(l.level) + "</span></li>"; }).join(""));
   if (A.image) { var ai = $("#about-img"); if (ai) { ai.src = A.image.src; ai.alt = A.image.alt || ""; } }
 

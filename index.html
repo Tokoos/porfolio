@@ -37,7 +37,7 @@
     "email": "mailto:houndjetodej@gmail.com",
     "url": "https://www.votre-domaine.com/",
     "knowsLanguage": ["fr", "ru", "en"],
-    "knowsAbout": ["Conception électronique", "PCB Design", "Altium Designer", "Contrôle d'impédance", "Systèmes embarqués", "ESP32", "STM32", "LoRa", "IoT", "Capteurs", "Microélectronique", "Nanoélectronique", "Tunnel FET", "Edge AI"],
+    "knowsAbout": ["Conception électronique", "PCB Design", "Altium Designer", "Contrôle d'impédance", "Simulation TCAD", "Synopsys Sentaurus", "MOSFET", "Systèmes embarqués", "ESP32", "STM32", "LoRa", "IoT", "Capteurs", "Microélectronique", "Nanoélectronique", "Tunnel FET", "Edge AI"],
     "sameAs": ["https://github.com/Tokoos"]
   }
   </script>
@@ -54,13 +54,13 @@
       </a>
       <nav aria-label="Navigation principale">
         <ul class="nav__links">
-          <li><a href="#accueil">Accueil</a></li>
           <li><a href="#apropos">À propos</a></li>
           <li><a href="#projets">Projets réalisés</a></li>
           <li><a href="#experience">Expérience</a></li>
+          <li><a href="#expertise">Skills</a></li>
           <li><a href="#formation">Formation</a></li>
-          <li><a href="#expertise">Compétences</a></li>
           <li><a href="#recherche">Recherche</a></li>
+          <li><a href="#moments">Moments</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -72,13 +72,13 @@
     <div class="mobile-menu" id="mobile-menu" hidden>
       <nav aria-label="Navigation mobile">
         <ol>
-          <li><a href="#accueil">Accueil</a></li>
           <li><a href="#apropos">À propos</a></li>
           <li><a href="#projets">Projets réalisés</a></li>
           <li><a href="#experience">Expérience</a></li>
+          <li><a href="#expertise">Skills</a></li>
           <li><a href="#formation">Formation</a></li>
-          <li><a href="#expertise">Compétences</a></li>
           <li><a href="#recherche">Recherche</a></li>
+          <li><a href="#moments">Moments</a></li>
           <li><a href="#contact">Contact</a></li>
         </ol>
         <a class="btn btn-primary" href="#" data-cv-download>Télécharger mon CV</a>
@@ -139,6 +139,28 @@
       <div class="band__track" id="band-track"></div>
     </div>
 
+    <!-- ================= À PROPOS ================= -->
+    <section class="section" id="apropos" aria-labelledby="about-title" data-trace="Profil">
+      <div class="container about">
+        <figure class="about__figure" data-reveal>
+          <div class="about__img"><img id="about-img" src="assets/img/projets/smart-sensor-panel.webp" alt="" width="1200" height="1600" loading="lazy"></div>
+          <figcaption>Panneau Smart Sensor - sortie de fabrication</figcaption>
+        </figure>
+        <div class="about__text" data-reveal style="--d:100ms">
+          <p class="eyebrow"><b>01</b> Profil</p>
+          <h2 class="h2" id="about-title">À propos</h2>
+          <p class="about__lead" id="about-lead"></p>
+          <div id="about-paragraphs"></div>
+          <ul class="tag-list about__keywords" id="about-keywords" aria-label="Mots-clés"></ul>
+          <div class="about__meta">
+            <div><p class="meta-label">Domaines d'expérience</p><ul class="meta-list" id="about-domains"></ul></div>
+            <div><p class="meta-label">Langues</p><ul class="meta-list" id="about-languages"></ul></div>
+            <div class="about__meta-wide"><p class="meta-label">Disponibilité</p><ul class="meta-list" id="about-availability"></ul></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ================= REEL (vidéo pilotée par le curseur) ================= -->
     <section class="reel-section" id="reel-section" aria-labelledby="reel-title">
       <div class="container">
@@ -165,27 +187,6 @@
       </div>
     </section>
 
-    <!-- ================= À PROPOS ================= -->
-    <section class="section" id="apropos" aria-labelledby="about-title" data-trace="Profil">
-      <div class="container about">
-        <figure class="about__figure" data-reveal>
-          <div class="about__img"><img id="about-img" src="assets/img/projets/smart-sensor-panel.webp" alt="" width="1200" height="1600" loading="lazy"></div>
-          <figcaption>Panneau Smart Sensor - sortie de fabrication</figcaption>
-        </figure>
-        <div class="about__text" data-reveal style="--d:100ms">
-          <p class="eyebrow"><b>01</b> À propos</p>
-          <h2 class="h2" id="about-title">À propos</h2>
-          <p class="about__lead" id="about-lead"></p>
-          <div id="about-paragraphs"></div>
-          <ul class="tag-list about__keywords" id="about-keywords" aria-label="Mots-clés"></ul>
-          <div class="about__meta">
-            <div><p class="meta-label">Domaines d'expérience</p><ul class="meta-list" id="about-domains"></ul></div>
-            <div><p class="meta-label">Langues</p><ul class="meta-list" id="about-languages"></ul></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- ================= PROJETS ================= -->
     <section class="section section--projects" id="projets" aria-labelledby="projects-title" data-trace="Projets réalisés">
       <div class="container">
@@ -201,27 +202,33 @@
     </section>
 
     <!-- ================= EXPÉRIENCE ================= -->
-    <section class="section" id="experience" aria-labelledby="xp-title" data-trace="Expérience">
+    <section class="section section--white" id="experience" aria-labelledby="xp-title" data-trace="Expérience">
       <div class="container">
         <div class="section-head" data-reveal>
-          <p class="eyebrow"><b>03</b> Parcours</p>
+          <p class="eyebrow"><b>03</b> Parcours professionnel</p>
           <h2 class="h2" id="xp-title">Expérience professionnelle</h2>
         </div>
         <div id="experience-list"></div>
       </div>
     </section>
 
+    <!-- ================= EXPERTISE ================= -->
+    <section class="section" id="expertise" aria-labelledby="skills-title" data-trace="Skills">
+      <div class="container">
+        <h2 class="skills-title trace-anchor" id="skills-title" data-reveal><span class="skills-title__num">04</span>Skills</h2>
+        <div class="skills-grid" id="skills-list"></div>
+      </div>
+    </section>
+
     <!-- ================= FORMATION ================= -->
-    <section class="section section--white" id="formation" aria-labelledby="edu-title" data-trace="Formation">
+    <section class="section" id="formation" aria-labelledby="edu-title" data-trace="Formation">
       <div class="container">
         <div class="section-head" data-reveal>
-          <p class="eyebrow"><b>04</b> Apprentissage</p>
+          <p class="eyebrow"><b>05</b> Diplômes</p>
           <h2 class="h2" id="edu-title">Formation &amp; certifications</h2>
         </div>
-        <div class="edu-grid">
-          <div><h3 class="sub-title">Formation</h3><div id="education"></div></div>
-          <div id="publications" hidden><h3 class="sub-title">Publications</h3><ul class="pubs"></ul></div>
-        </div>
+        <h3 class="sub-title">Formation</h3>
+        <div id="education"></div>
         <div class="certs-head" data-reveal>
           <h3 class="sub-title">Certifications</h3>
           <p>Cliquez sur un certificat pour ouvrir le document complet.</p>
@@ -230,28 +237,8 @@
       </div>
     </section>
 
-    <!-- ================= MOMENTS FORTS ================= -->
-    <section class="section section--warm" id="moments" aria-labelledby="moments-title" data-trace="Moments">
-      <div class="container">
-        <div class="section-head" data-reveal>
-          <p class="eyebrow"><b>HSE · MIEM</b> Parcours</p>
-          <h2 class="h2" id="moments-title">Moments forts</h2>
-          <p class="lead">Les meilleurs moments de mon parcours d'ingénieur : laboratoire, robotique, événements et travail d'équipe.</p>
-        </div>
-        <ul class="moments" id="moments-grid"></ul>
-      </div>
-    </section>
-
-    <!-- ================= EXPERTISE ================= -->
-    <section class="section" id="expertise" aria-labelledby="skills-title" data-trace="Skills">
-      <div class="container">
-        <h2 class="skills-title trace-anchor" id="skills-title" data-reveal><span class="skills-title__num">05</span>Skills</h2>
-        <div class="skills-grid" id="skills-list"></div>
-      </div>
-    </section>
-
     <!-- ================= RECHERCHE ================= -->
-    <section class="section section--warm" id="recherche" aria-labelledby="research-title" data-trace="Recherche">
+    <section class="section section--white" id="recherche" aria-labelledby="research-title" data-trace="Recherche">
       <div class="container">
         <article class="research" data-reveal>
           <div class="research__grid">
@@ -265,6 +252,10 @@
             </div>
             <ol class="pipeline" id="research-pipeline" aria-label="Chaîne étudiée : capteur, TFET, lecture et prétraitement analogique, Edge AI, système basse consommation"></ol>
           </div>
+          <div class="research__pubs" id="publications" hidden>
+            <h3>Publication</h3>
+            <ul class="pubs"></ul>
+          </div>
           <div class="research__bottom">
             <div><h3>Objectifs</h3><ul id="research-objectives"></ul></div>
             <div><h3>Technologies étudiées</h3><ul id="research-tech"></ul></div>
@@ -274,10 +265,22 @@
       </div>
     </section>
 
+    <!-- ================= MOMENTS FORTS ================= -->
+    <section class="section section--warm" id="moments" aria-labelledby="moments-title" data-trace="Moments">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><b>07</b> HSE · MIEM</p>
+          <h2 class="h2" id="moments-title">Moments forts</h2>
+          <p class="lead">Les meilleurs moments de mon parcours d'ingénieur : laboratoire, robotique, événements et travail d'équipe.</p>
+        </div>
+        <ul class="moments" id="moments-grid"></ul>
+      </div>
+    </section>
+
     <!-- ================= CONTACT ================= -->
     <section class="section section--white" id="contact" aria-labelledby="contact-title" data-trace="Futur">
       <div class="container">
-        <p class="eyebrow" data-reveal><b>07</b> Contact</p>
+        <p class="eyebrow" data-reveal><b>08</b> Contact</p>
         <h2 class="contact__title" id="contact-title" data-reveal>Un projet<br>en tête <span>?</span></h2>
         <div class="contact__grid">
           <div data-reveal>
@@ -296,6 +299,7 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <!-- ================= FOOTER ================= -->

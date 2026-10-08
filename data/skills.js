@@ -92,6 +92,21 @@ PORTFOLIO.skills = [
     ]
   },
   {
+    id: "tcad",
+    title: "Device Simulation (TCAD)",
+    research: true,
+    items: [
+      "Synopsys Sentaurus TCAD",
+      "Sentaurus Structure Editor (SDE)",
+      "Sentaurus Device (SDevice)",
+      "Sentaurus Visual (SVisual)",
+      "MOSFET Modeling",
+      "High-k / Metal Gate",
+      "Doping Profiles & Meshing",
+      "I–V Characterization"
+    ]
+  },
+  {
     id: "nano",
     title: "Micro / Nanoelectronics",
     research: true,

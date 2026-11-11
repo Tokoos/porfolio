@@ -410,4 +410,104 @@ PORTFOLIO.projects = [
     ],
     files: []
   }
+  ,
+  {
+    id: "fc-h743",
+    number: "10",
+    title: "FC-H743 — contrôleur de vol pour quadricoptère",
+    category: "Embedded · PCB · Sensors",
+    categories: ["embedded", "pcb", "sensors"],
+    context: "Projet personnel",
+    summary:
+      "Carte de pilotage pour quadricoptère autour d'un STM32H743, compatible avec les logiciels de vol open source Betaflight, INAV et ArduPilot.",
+    description: [
+      "La FC-H743 est une carte de pilotage pour quadricoptère, pensée pour être compatible avec les logiciels de vol open source les plus utilisés : Betaflight, INAV et ArduPilot.",
+      "Elle réunit sur un PCB 2 couches de 37 × 37 mm, au format de fixation standard 30,5 × 30,5 mm, un microcontrôleur STM32H743 à 480 MHz, deux gyroscopes redondants, un baromètre, 128 Mo de mémoire pour l'enregistrement des vols et une alimentation 2 à 6S avec régulation 5 V / 3,3 V dédiée."
+    ],
+    role: "Conception de la carte : schéma et PCB 2 couches au format 30,5 × 30,5 mm",
+    technologies: ["STM32H743", "ICM-42688-P", "DPS310", "Betaflight", "INAV", "ArduPilot", "ExpressLRS", "PCB 2 couches"],
+    hardware: [
+      { name: "STM32H743 (480 MHz)", role: "Microcontrôleur principal — exécution du logiciel de vol" },
+      { name: "2 × ICM-42688-P", role: "Gyroscopes / accéléromètres, montés en redondance" },
+      { name: "DPS310", role: "Baromètre pour le maintien d'altitude" },
+      { name: "Mémoire 128 Mo", role: "Enregistrement des données de vol (blackbox)" },
+      { name: "Régulateurs 5 V / 3,3 V", role: "Alimentation dédiée depuis une batterie 2 à 6S" }
+    ],
+    comms: [
+      { name: "ExpressLRS", role: "Connecteur pour récepteur radio" },
+      { name: "GPS", role: "Connecteur pour module de positionnement" },
+      { name: "Vidéo HD numérique", role: "Connecteur pour système vidéo HD" },
+      { name: "Variateur 4-en-1", role: "Connecteur pour l'ESC des quatre moteurs" }
+    ],
+    steps: [],
+    pcb: [
+      { label: "Couches", value: "2" },
+      { label: "Dimensions", value: "37 × 37 mm" },
+      { label: "Fixation", value: "Standard 30,5 × 30,5 mm" },
+      { label: "Alimentation", value: "2 à 6S — régulation 5 V / 3,3 V" }
+    ],
+    technical: [],
+    highlights: [
+      "Compatible Betaflight, INAV et ArduPilot",
+      "Double gyroscope ICM-42688-P pour la redondance",
+      "Maintien d'altitude grâce au baromètre DPS310",
+      "128 Mo de mémoire pour l'enregistrement des vols",
+      "Connecteurs prêts pour ExpressLRS, GPS, vidéo HD numérique et variateur 4-en-1"
+    ],
+    applications: [],
+    altiumViewerUrl: "",
+    cover: "assets/img/projets/fc-h743-3d.webp",
+    gallery: [
+      { src: "assets/img/projets/fc-h743-3d.webp", caption: "Rendu 3D — perspective" },
+      { src: "assets/img/projets/fc-h743-top.webp", caption: "Vue de dessus" },
+      { src: "assets/img/projets/fc-h743-bottom.webp", caption: "Vue de dessous" }
+    ],
+    files: []
+  }
+  ,
+  {
+    id: "nfc-payment-terminal",
+    number: "11",
+    title: "Terminal de paiement NFC",
+    category: "PCB · IoT · Embedded",
+    categories: ["pcb", "iot", "embedded"],
+    context: "Projet personnel",
+    summary:
+      "Terminal de paiement sans contact autour d'un ESP32-S3-WROOM-1U, avec antenne NFC intégrée au PCB, clavier matriciel et alimentation par USB Type-C.",
+    description: [
+      "Carte de terminal de paiement sans contact : le lecteur NFC communique avec les cartes ou smartphones présentés devant l'antenne, tandis que le clavier matriciel permet la saisie du montant ou du code.",
+      "L'ESP32-S3-WROOM-1U assure le traitement et la connectivité sans fil. La carte est alimentée par USB Type-C, avec une conversion 5 V vers 3,3 V pour les circuits logiques."
+    ],
+    role: "Conception de la carte : schéma et PCB, antenne NFC intégrée au circuit imprimé",
+    technologies: ["ESP32-S3", "NFC", "Antenne PCB", "Clavier matriciel", "USB Type-C"],
+    hardware: [
+      { name: "ESP32-S3-WROOM-1U", role: "Microcontrôleur principal — traitement, Wi-Fi et Bluetooth (antenne externe)" },
+      { name: "Lecteur NFC + antenne PCB", role: "Communication sans contact avec cartes et smartphones" },
+      { name: "Clavier matriciel 12 touches", role: "Saisie du montant et du code" },
+      { name: "Convertisseur 5 V → 3,3 V", role: "Alimentation des circuits logiques" },
+      { name: "USB Type-C", role: "Alimentation de la carte" }
+    ],
+    steps: [],
+    pcb: [
+      { label: "Microcontrôleur", value: "ESP32-S3-WROOM-1U" },
+      { label: "Antenne NFC", value: "Intégrée au PCB" },
+      { label: "Clavier", value: "Matrice de 12 touches (4 × 3)" },
+      { label: "Alimentation", value: "USB Type-C — 5 V → 3,3 V" }
+    ],
+    technical: [],
+    highlights: [
+      "Paiement sans contact par NFC",
+      "Antenne NFC intégrée directement au circuit imprimé",
+      "Clavier matriciel pour la saisie",
+      "Alimentation simple par USB Type-C"
+    ],
+    applications: ["Paiement sans contact", "Points de vente", "Contrôle d'accès"],
+    altiumViewerUrl: "",
+    cover: "assets/img/projets/nfc-terminal-3d.webp",
+    gallery: [
+      { src: "assets/img/projets/nfc-terminal-3d.webp", caption: "Rendu 3D — perspective" },
+      { src: "assets/img/projets/nfc-terminal-top.webp", caption: "Vue de dessus" }
+    ],
+    files: []
+  }
 ];

@@ -8,6 +8,10 @@
    - cover            image principale (cartes + en-tête de la page projet)
    - gallery          [{ src, caption }] — images affichées avec zoom
    - files            [{ label, href }] — documents téléchargeables (plans, PDF…)
+   - tool / specsTitle / altium   (optionnels) pour un projet hors PCB :
+                      outil affiché (défaut « Altium Designer »), titre du bloc
+                      de caractéristiques (défaut « Conception PCB »),
+                      altium: false masque le bloc Altium 365.
    - Un projet sans image affiche une fiche technique typographique (aucune image inventée).
    ===================================================================== */
 window.PORTFOLIO = window.PORTFOLIO || {};
@@ -18,7 +22,8 @@ PORTFOLIO.projectCategories = [
   { id: "embedded", label: "Embedded Systems" },
   { id: "sensors", label: "Sensors" },
   { id: "iot", label: "IoT" },
-  { id: "industrial", label: "Industrial" }
+  { id: "industrial", label: "Industrial" },
+  { id: "tcad", label: "TCAD" }
 ];
 
 PORTFOLIO.projects = [
@@ -279,9 +284,12 @@ PORTFOLIO.projects = [
     ],
     applications: ["Contrôle d'engins industriels lourds", "Supervision d'équipements de chantier", "Télémétrie industrielle", "IoT pour environnements robustes"],
     altiumViewerUrl: "",
-    cover: "",
+    cover: "assets/img/projets/industrial-controller-3d.webp",
     specs: ["ESP32", "LoRa", "TFT", "2–4 couches"],
-    gallery: [],
+    gallery: [
+      { src: "assets/img/projets/industrial-controller-3d.webp", caption: "Rendu 3D — perspective" },
+      { src: "assets/img/projets/industrial-controller-top.webp", caption: "Vue de dessus" }
+    ],
     files: []
   },
   {
@@ -507,6 +515,54 @@ PORTFOLIO.projects = [
     gallery: [
       { src: "assets/img/projets/nfc-terminal-3d.webp", caption: "Rendu 3D — perspective" },
       { src: "assets/img/projets/nfc-terminal-top.webp", caption: "Vue de dessus" }
+    ],
+    files: []
+  }
+  ,
+  {
+    id: "mosfet-28nm-tcad",
+    number: "12",
+    title: "Modélisation TCAD d'un MOSFET à canal p — 28 nm",
+    category: "TCAD · Microélectronique",
+    categories: ["tcad"],
+    context: "Projet académique",
+    tool: "Synopsys Sentaurus TCAD",
+    specsTitle: "Paramètres de la structure",
+    altium: false,
+    summary:
+      "Développement d'un modèle TCAD d'un transistor MOS à canal p en technologie 28 nm, avec grille high-k / métal, pour tracer sa caractéristique de transfert et évaluer la tension drain-source maximale admissible.",
+    description: [
+      "La structure étudiée est un transistor MOS à canal p conçu selon les règles de la technologie 28 nm, avec une longueur physique de canal de 28 nm. L'empilement de grille associe une couche d'interface SiO₂ de 1 nm, un diélectrique high-k HfO₂ et une grille métallique TiN, pour une épaisseur d'oxyde équivalente (EOT) de 2 nm.",
+      "L'objectif est de développer un modèle TCAD capable de construire la caractéristique de transfert Id(Vg) de la structure et d'évaluer la tension drain-source maximale admissible, le transistor devant tenir une tension d'au moins 10 V."
+    ],
+    role: "Construction de la structure et du maillage, simulation électrique et analyse des résultats sous Sentaurus TCAD",
+    technologies: ["Sentaurus TCAD", "Sentaurus Structure Editor", "Sentaurus Device", "Sentaurus Visual", "MOSFET 28 nm", "High-k / grille métal"],
+    steps: [
+      "Construction de la géométrie 2D du transistor : substrat, source, drain et empilement de grille SiO₂ / HfO₂ / TiN.",
+      "Définition des profils de dopage et génération du maillage.",
+      "Simulation électrique de la caractéristique de transfert Id(Vg).",
+      "Évaluation de la tension drain-source maximale admissible (objectif : au moins 10 V)."
+    ],
+    pcb: [
+      { label: "Type", value: "MOSFET à canal p" },
+      { label: "Nœud technologique", value: "28 nm" },
+      { label: "Longueur de canal", value: "28 nm" },
+      { label: "Empilement de grille", value: "SiO₂ (1 nm) / HfO₂ / TiN" },
+      { label: "EOT", value: "2 nm" },
+      { label: "Tenue en tension visée", value: "≥ 10 V" }
+    ],
+    technical: [],
+    highlights: [
+      "Grille high-k / métal (HfO₂ / TiN) représentative des nœuds avancés",
+      "Modèle complet : structure, dopage, maillage et simulation électrique",
+      "Caractéristique de transfert Id(Vg)",
+      "Évaluation de la tension drain-source maximale"
+    ],
+    applications: [],
+    altiumViewerUrl: "",
+    cover: "assets/img/projets/mosfet-28nm-tcad.webp",
+    gallery: [
+      { src: "assets/img/projets/mosfet-28nm-tcad.webp", caption: "Profil de dopage de la structure maillée — Sentaurus Visual" }
     ],
     files: []
   }

@@ -42,6 +42,7 @@
   function checks(arr) { return arr && arr.length ? '<ul class="checks">' + arr.map(function (x) { return "<li>" + icon("check") + "<span>" + esc(x) + "</span></li>"; }).join("") + "</ul>" : ""; }
 
   var gallery = p.gallery || [];
+  var hasAltium = p.altium !== false; // false = projet hors Altium (TCAD…) : pas de bloc Altium 365
   var hardware = table(p.hardware, "Composant", "Rôle") + table(p.comms, "Protocole", "Usage");
   var pcbSpecs = (p.pcb && p.pcb.length ? '<dl class="specs">' + p.pcb.map(function (s) { return '<div class="spec"><dt>' + esc(s.label) + "</dt><dd>" + esc(s.value) + "</dd></div>"; }).join("") + "</dl>" : "") + checks(p.technical);
   var files = (p.files || []).length ? '<div class="files">' + p.files.map(function (f) { return '<a class="btn btn-secondary btn-sm" href="' + esc(f.href) + '" target="_blank" rel="noopener">' + icon("file") + esc(f.label) + "</a>"; }).join("") + "</div>" : "";
@@ -57,9 +58,9 @@
           '<dl class="pd-facts">' +
             "<div><dt>Rôle personnel</dt><dd>" + esc(p.role) + "</dd></div>" +
             "<div><dt>Cadre</dt><dd>" + esc(p.context) + "</dd></div>" +
-            "<div><dt>Outil</dt><dd>Altium Designer</dd></div>" +
+            "<div><dt>Outil</dt><dd>" + esc(p.tool || "Altium Designer") + "</dd></div>" +
           "</dl>" +
-          '<div class="pd-actions">' + U.AltiumViewerButton(p, { size: "lg", placeholder: true }) +
+          '<div class="pd-actions">' + (hasAltium ? U.AltiumViewerButton(p, { size: "lg", placeholder: true }) : "") +
             (gallery.length ? '<a class="btn btn-secondary btn-lg" href="#galerie">Voir la galerie</a>' : "") + "</div>" +
         "</div>" +
         '<div class="pd-hero__visual">' + U.ProjectVisual(p) + "</div>" +
@@ -71,17 +72,17 @@
       block("Présentation", (p.description || []).map(function (x) { return "<p>" + esc(x) + "</p>"; }).join("")) +
       block("Fonctionnement", p.steps && p.steps.length ? '<ol class="steps">' + p.steps.map(function (s) { return "<li>" + esc(s) + "</li>"; }).join("") + "</ol>" : "") +
       block("Matériel & communications", hardware) +
-      block("Conception PCB", pcbSpecs + files) +
+      block(esc(p.specsTitle || "Conception PCB"), pcbSpecs + files) +
       block("Points forts", checks(p.highlights)) +
       block("Applications", p.applications && p.applications.length ? '<ul class="tag-list">' + p.applications.map(function (a) { return '<li class="tag">' + esc(a) + "</li>"; }).join("") + "</ul>" : "") +
       block("Technologies", '<ul class="tag-list">' + (p.technologies || []).map(function (t) { return '<li class="tag tag--orange">' + esc(t) + "</li>"; }).join("") + "</ul>") +
       (gallery.length ? '<section class="pd-block" id="galerie" data-reveal><header class="pd-block__head"><span class="pd-block__num">' + num() + '</span><h2 class="pd-block__title">Galerie</h2></header><div class="pd-block__body">' + U.ProjectGallery(gallery) + "</div></section>" : "") +
 
-      '<section class="altium-band" data-reveal>' +
+      (hasAltium ? '<section class="altium-band" data-reveal>' +
         '<div><p class="eyebrow"><b>A365</b> Altium 365</p><h2 class="h3">Explorer le projet dans le Web Viewer</h2>' +
         "<p>Schéma, PCB et vue 3D interactifs, en lecture seule, directement dans le navigateur.</p></div>" +
         U.AltiumViewerButton(p, { size: "lg", placeholder: true }) +
-      "</section>" +
+      "</section>" : "") +
 
       '<nav class="pd-pager" aria-label="Autres projets réalisés">' +
         '<a class="pd-pager__link" href="projet.html?id=' + encodeURIComponent(prev.id) + '"><span class="mono">' + icon("arrowLeft", "icon-xs") + "Précédent</span><strong>" + esc(prev.title) + "</strong></a>" +
